@@ -16,24 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-jh-VYt">
-                                <rect key="frame" x="182.5" y="433" width="49" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-jh-VYt">
+                                <rect key="frame" x="129.5" y="370.5" width="155" height="155"/>
+                                <state key="normal" image="RecordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gjo-tk-5vb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG4-7B-GgO">
-                                <rect key="frame" x="154" y="461.5" width="106" height="21"/>
+                                <rect key="frame" x="154" y="533" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-sf-XHd">
-                                <rect key="frame" x="156" y="500" width="106" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Stop Recording"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-sf-XHd">
+                                <rect key="frame" x="129.5" y="549" width="155" height="155"/>
+                                <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCf-IT-AeH"/>
                                 </connections>
@@ -42,16 +40,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iG4-7B-GgO" firstAttribute="baseline" secondItem="4pd-jh-VYt" secondAttribute="firstBaseline" constant="24.5" symbolType="layoutAnchor" id="Gxv-ES-8Fe"/>
+                            <constraint firstItem="Tfq-sf-XHd" firstAttribute="centerX" secondItem="4pd-jh-VYt" secondAttribute="centerX" id="EaZ-vF-yNa"/>
                             <constraint firstItem="4pd-jh-VYt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JAQ-cW-d2D"/>
                             <constraint firstItem="4pd-jh-VYt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QTG-wf-C5l"/>
-                            <constraint firstItem="iG4-7B-GgO" firstAttribute="centerX" secondItem="4pd-jh-VYt" secondAttribute="centerX" id="fSi-zq-kfS"/>
-                            <constraint firstItem="Tfq-sf-XHd" firstAttribute="centerX" secondItem="iG4-7B-GgO" secondAttribute="centerX" id="gE5-v0-Ib9"/>
-                            <constraint firstItem="Tfq-sf-XHd" firstAttribute="firstBaseline" secondItem="iG4-7B-GgO" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="sd9-gE-2eo"/>
+                            <constraint firstItem="Tfq-sf-XHd" firstAttribute="top" secondItem="4pd-jh-VYt" secondAttribute="bottom" constant="23.5" id="o5r-NV-D83"/>
+                            <constraint firstItem="iG4-7B-GgO" firstAttribute="centerX" secondItem="4pd-jh-VYt" secondAttribute="centerX" id="p02-7E-hts"/>
+                            <constraint firstItem="iG4-7B-GgO" firstAttribute="top" secondItem="4pd-jh-VYt" secondAttribute="bottom" constant="7.5" id="zyI-xz-whx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="4pd-jh-VYt" id="byP-Hu-JWx"/>
                         <outlet property="recordingLabel" destination="iG4-7B-GgO" id="RdS-Ni-bD5"/>
+                        <outlet property="stopRecordingButton" destination="Tfq-sf-XHd" id="MQk-BV-BkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,11 +60,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="RecordButton" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
