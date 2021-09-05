@@ -34,8 +34,8 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCf-IT-AeH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tab to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG4-7B-GgO">
-                                <rect key="frame" x="154" y="525" width="106" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG4-7B-GgO">
+                                <rect key="frame" x="154" y="533" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,9 +86,6 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="Ze7-KS-aqi" eventType="touchUpInside" id="Vrz-9B-ngO"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS2-RL-qPs" userLabel="Fast Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="228.5"/>
@@ -198,7 +195,7 @@
                         <outlet property="echoButton" destination="o5p-19-gnZ" id="KBh-d8-acG"/>
                         <outlet property="rabbitButton" destination="aS2-RL-qPs" id="iGm-cd-eEE"/>
                         <outlet property="reverbButton" destination="51J-ip-U9b" id="Rpw-1A-SXr"/>
-                        <outlet property="snailButton" destination="E0M-ex-Gp1" id="BVf-BT-BKB"/>
+                        <outlet property="snailButton" destination="E0M-ex-Gp1" id="QL1-mX-3l5"/>
                         <outlet property="stopButton" destination="T2O-Wm-hGr" id="wCO-PF-clK"/>
                         <outlet property="vaderButton" destination="r7s-T0-c8Q" id="mbc-DV-fcH"/>
                     </connections>
